@@ -1,16 +1,31 @@
 object ballesta {
-  method municion(){
-    return 10
+  var municion = 10
+
+  method municion() {
+    return municion
   }
-  method estaCargada(){
-    return municion()
+
+  method estaCargada() {
+    return flechas > 0
   }
+
   method potencia() {
     return 4
   }
+
+  method disparar(municion) {
+    municion = municion - 1
+  }
 }
 
-object ballesta {
+object jabalina {
   
+  method estaCargada() {
+    return true
+  }
+
+  method potencia() {
+    return 20
+  }
 }
 
