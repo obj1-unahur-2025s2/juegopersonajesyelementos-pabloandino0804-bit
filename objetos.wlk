@@ -6,7 +6,7 @@ object ballesta {
   }
 
   method estaCargada() {
-    return flechas > 0
+    return municion > 0
   }
 
   method potencia() {
