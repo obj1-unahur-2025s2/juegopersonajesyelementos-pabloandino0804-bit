@@ -28,4 +28,3 @@ object jabalina {
     return 20
   }
 }
-
