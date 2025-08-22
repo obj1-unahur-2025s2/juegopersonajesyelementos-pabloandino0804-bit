@@ -1,4 +1,3 @@
-#Objetos
 object ballesta {
   var municion = 10
 
@@ -30,7 +29,6 @@ object jabalina {
   }
 }
 
-#Elementos
 object castillo {
 
   method altura()  {
