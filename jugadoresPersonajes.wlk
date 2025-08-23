@@ -1,9 +1,34 @@
-import example.pepita
+import armas.*
+import elementos.*
+object  floki {
+    var  arma = jabalina
+    method encontrar(elemento) {
+        if(arma.estaCargada()){
+            elemento.recibirAtaque(arma.potencia())
+            arma.usar()
+        }
+        
+    }
+    method cambiarArma(nuevaArma) {
+        arma = nuevaArma
+    }
+}
 
-describe "group of tests for pepita" {
+object mario {
+    var valorRecolectado = 0
+    var ultimoElemento = ningunElemento
+    method encontrar(elemento) {
+        elemento.recibrTrabajo()
+        valorRecolectado = valorRecolectado + elemento.valorOtorgado()
+        ultimoElemento = elemento
+    }
+    method estaFeliz(){
+        return valorRecolectado >= 50 || ultimoElemento.altura() >= 10
+    }
+}
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
-  }
-
+object luisa {
+    method aparece(elemento){
+        
+    }
 }
